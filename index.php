@@ -33,5 +33,5 @@ session_start();
 </html>
 
 <?php
-$conn->close();
+$conn->close(); 
 ?>
