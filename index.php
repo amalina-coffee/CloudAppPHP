@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LAMP App</title>
+	<title>Hello</title>
 	<link rel="stylesheet" href="styles/styles.css">
 	
 </head>
@@ -36,16 +36,3 @@ session_start();
 <?php
 $conn->close();
 ?>
-     
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
