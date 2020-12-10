@@ -1,14 +1,40 @@
-<html> 
- <title>HTML with PHP</title>
- <body>
- <h1>My Example</h1>
- <?php
-//your PHP code goes here
+<?php
+    $servername = "localhost";
+    $username = "dtbsuser";
+    $password = "dtbs#passw01";
+    $dbname = "dtbsname";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+
+    $sql = "UPDATE Counter SET visits = visits+1 WHERE id = 1";
+    $conn->query($sql);
+
+    $sql = "SELECT visits FROM Counter WHERE id = 1";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $visits = $row["visits"];
+        }
+    } else {
+        echo "no results";
+    }
+    
+    $conn->close();
 ?>
- <b>Here is some more HTML</b>
- <?php
- //more PHP code
- ?>
- 
- </body>
- </html>
+
+<!doctype html>  
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Visit counter</title>
+    </head>
+    <body>
+        Visits: <?php print $visits; ?>
+
+    </body>
+</html>
