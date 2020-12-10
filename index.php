@@ -10,13 +10,13 @@ session_start();
 	
 </head>
 <body>
-    <h3>LAMP App</h3>
+    <h3>Hello</h3>
     <?php
 	require_once("login_db.php");
     
-    $sql = "UPDATE Counter SET visits = visits+1 WHERE id = 1";
+    $sql = "UPDATE Counter SET visits = visits+1";
     $conn->query($sql);
-    $sql = "SELECT visits FROM Counter WHERE id = 1";
+    $sql = "SELECT visits FROM Counter";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -28,8 +28,7 @@ session_start();
         echo "no results";
     }
     ?>
-    
-    <h3>Visits: <?php echo $visits; ?></h3>
+    Visits: <?php print $visits; ?>
 </body>
 </html>
 
