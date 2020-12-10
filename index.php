@@ -13,22 +13,17 @@ session_start();
     <h3>Hello</h3>
     <?php
 	require_once("login_db.php");
-    
-    $sql = "UPDATE Counter SET visits = visits+1";
-    $conn->query($sql);
-    $sql = "SELECT visits FROM Counter";
-    $result = $conn->query($sql);
+	
+	mysql_query("UPDATE counter SET visits = visits + 1");
+	$count = mysql_fetch_row(mysql_query("SELECT visits FROM counter"));
 
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            $visits = $row["visits"];
-        }
-    } 
-    else {
-        echo "no results";
-    }
+
+    
+   
+
+    
     ?>
-    You are visitor #: <?php print $visits; ?>
+    You are visitor #: <?php print $count; ?>
 </body>
 </html>
 
