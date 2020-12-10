@@ -1,14 +1,4 @@
 <?php
-    $servername = "localhost";
-    $username = "dtbsuser";
-    $password = "dtbs#passw01";
-    $dbname = "dtbsname";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-
     $sql = "UPDATE Counter SET visits = visits+1 WHERE id = 1";
     $conn->query($sql);
 
