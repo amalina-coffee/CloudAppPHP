@@ -26,15 +26,15 @@
     $conn->close();
 ?>
 
-<!doctype html>  
-<html lang="en">
-    <head>
-        <meta charset="utf-8"> 
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Visit counter</title>
-    </head>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Hello World</title>
+ </head>
     <body>
         Visits: <?php print $visits; ?>
-
     </body>
 </html>
+    
