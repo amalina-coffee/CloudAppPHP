@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello</title>
+	<title>Welcome</title>
 	<link rel="stylesheet" href="styles/styles.css">
 	
 </head>
@@ -28,7 +28,7 @@ session_start();
         echo "no results";
     }
     ?>
-    Visits: <?php print $visits; ?>
+    You are visitor #: <?php print $visits; ?>
 </body>
 </html>
 
