@@ -5,9 +5,9 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Visit counter</title>
+	<title>LAMP App</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	
 </head>
 <body>
     <h3>LAMP App</h3>
@@ -29,7 +29,7 @@ session_start();
     }
     ?>
     
-    <h3>Visits: <?php print $visits; ?></h3>
+    <h3>Visits: <?php echo $visits; ?></h3>
 </body>
 </html>
 
