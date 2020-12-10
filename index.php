@@ -14,16 +14,13 @@ session_start();
     <?php
 	require_once("login_db.php");
 	
+	mysql_query($sql);
+	
 	mysql_query("UPDATE counter SET visits = visits + 1");
-	$count = mysql_fetch_row(mysql_query("SELECT visits FROM counter"));
-
-
-    
-   
-
+	$result = mysql_fetch_row(mysql_query("SELECT visits FROM counter"));
     
     ?>
-    You are visitor #: <?php print $count; ?>
+    You are visitor #: <?php print $result; ?>
 </body>
 </html>
 
