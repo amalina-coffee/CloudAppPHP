@@ -1,5 +1,3 @@
 <?php
-
-Echo ‘HelloWorld!’;
-
+echo ‘HelloWorld!’;
 ?>
