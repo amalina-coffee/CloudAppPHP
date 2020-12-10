@@ -1,17 +1,21 @@
 <?php
-    $servername = "localhost";
-    $username = "dtbsuser";
-    $password = "dtbs#passw01";
-    $dbname = "dtbsname";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+session_start();
+?>
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Visit counter</title>
+</head>
+<body>
+    <h3>LAMP App</h3>
+    <?php
+	require_once("login_db.php");
+    
     $sql = "UPDATE Counter SET visits = visits+1 WHERE id = 1";
     $conn->query($sql);
-
     $sql = "SELECT visits FROM Counter WHERE id = 1";
     $result = $conn->query($sql);
 
@@ -19,22 +23,17 @@
         while($row = $result->fetch_assoc()) {
             $visits = $row["visits"];
         }
-    } else {
+    } 
+    else {
         echo "no results";
     }
+    ?>
     
-    $conn->close();
-?>
-
-<!doctype html>  
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Visit counter</title>
-    </head>
-    <body>
-        Visits: <?php print $visits; ?>
-
-    </body>
+    <h3>Visits: <?php print $visits; ?></h3>
+</body>
 </html>
+
+<?php
+$conn->close();
+?>
+     
