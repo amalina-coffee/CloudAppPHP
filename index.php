@@ -37,7 +37,7 @@ session_start();
 	
 	$name = $_POST['name'];
 	if(isset($name)) {
-		$query = 'INSERT INTO User (name) VALUES ($name)';
+		 $query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
 			echo "<br>Hello, " . $name . ". You are visitor #" . $visits; 
