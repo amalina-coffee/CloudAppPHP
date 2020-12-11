@@ -13,7 +13,7 @@ session_start();
     <h1>Hello World</h1>
 
 	<form method='POST'>
-		<h3>What is your name?</h3>
+		<Wht is your name?
 		<input type="text" id="name" name="name">
 		<input type="submit" value="submit"/>
 	</form>
