@@ -34,7 +34,7 @@ session_start();
 		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
-			echo "Hello" .$name;
+			echo "Hello " . $name;
 		} else {
 			echo "Error: <br>" . $conn->error;
 		}
@@ -44,7 +44,7 @@ session_start();
     ?>
 	<form method='POST'>
 		<h2>What is your name?</h2>
-		<input type="text" name="name">
+		<input type="text" id="name" name="name">
 		<input type="submit" value="Submit Name">
 	</form>
 	
