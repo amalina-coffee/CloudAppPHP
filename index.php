@@ -50,7 +50,9 @@ session_start();
 	
 	
 	
-	Hello: <?php print $name1; ?>
+	
+	
+	
 	You are visitor #: <?php print $visits; ?>
 </body>
 </html>
