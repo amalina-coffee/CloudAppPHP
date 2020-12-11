@@ -34,7 +34,7 @@ session_start();
 		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
-			echo "Hello";
+			echo "Hello" .$name;
 		} else {
 			echo "Error: <br>" . $conn->error;
 		}
