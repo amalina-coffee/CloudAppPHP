@@ -14,12 +14,6 @@ session_start();
     <?php
 	require_once("login_db.php");
 	
-	
-	
-	
-	
-	
-	
 	$sql = "UPDATE Counter SET visits = visits+1";
 	$conn->query($sql);
 	
@@ -35,12 +29,12 @@ session_start();
         echo "no results";
 	}
 	
-	$name = $_POST[‘name’];
+	$name = $_POST['name'];
 	if(isset($name)) {
-		$query = 'INSERT INTO 'sampledb'. 'User' ('name') VALUES ("'.$name.'");';
+		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
-			echo "Hello " . $name;
+			echo "User created successfully";
 		} else {
 			echo "Error: <br>" . $conn->error;
 		}
