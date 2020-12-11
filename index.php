@@ -31,7 +31,7 @@ session_start();
 	
 	
 	$name1 = $_POST[‘name’];
-	echo “Hello “;
+	echo "Hello ";
 	echo $name1;
 	
     
