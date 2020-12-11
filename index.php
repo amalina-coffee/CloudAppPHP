@@ -10,7 +10,7 @@ session_start();
 	
 </head>
 <body>
-    <h3>Hello World</h3>
+    <h1>Hello World</h1>
     <?php
 	require_once("login_db.php");
 	
@@ -43,7 +43,7 @@ session_start();
     
     ?>
 	<form method='POST'>
-		<h2>What is your name?</h2>
+		<h3>What is your name?</h3>
 		<input type="text" id="name" name="name">
 		<button type="submit" name="greet">Submit</button>
 
@@ -54,7 +54,7 @@ session_start();
 	
 	
 	
-	You are visitor #: <?php print $visits; ?>
+	<p>You are visitor #: <?php print $visits; ?></p>
 </body>
 </html>
 
