@@ -32,7 +32,7 @@ session_start();
 	
 	$name1 = $_POST[‘name’];
 	echo “Hello “;
-	echo $name1,
+	echo $name1;
 	
     
     ?>
