@@ -29,20 +29,18 @@ session_start();
         echo "no results";
 	}
 	
-	
 	$name1 = $_POST[‘name’];
-	echo "Hello ";
-	echo $name1;
-	
+
     
     ?>
 	
 	form action=”index.php” method=”post”>
 		<p>What is your name? <input type=”text” id="name" name=”name” /></p>
-		<p><input type=”submit” /></p>
+		<p><input type=”submit” button="submit"/></p>
 	</form>
 	
-    You are visitor #: <?php print $visits; ?>
+	Hello: <?php print $name1; ?>
+	You are visitor #: <?php print $visits; ?>
 </body>
 </html>
 
