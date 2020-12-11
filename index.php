@@ -10,7 +10,7 @@ session_start();
 	
 </head>
 <body>
-    <h3>Hello</h3>
+    <h3>Hello World</h3>
     <?php
 	require_once("login_db.php");
 	
