@@ -29,15 +29,26 @@ session_start();
         echo "no results";
 	}
 	
-	$name1 = $_POST[‘name’];
+	$name = $_POST[‘name’];
+	if(isset($name)) {
+		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
+
+		if ($conn->query($query) === TRUE) {
+			echo "Hello";
+		} else {
+			echo "Error: <br>" . $conn->error;
+		}
+	}
 
     
     ?>
-	
-	form action=”index.php” method=”post”>
-		<p>What is your name? <input type=”text” id="name" name=”name” /></p>
-		<p><input type=”submit” button="submit"/></p>
+	<form method='POST'>
+		<h2>What is your name?</h2>
+		<input type="text" name="name">
+		<input type="submit" value="Submit Name">
 	</form>
+	
+	
 	
 	Hello: <?php print $name1; ?>
 	You are visitor #: <?php print $visits; ?>
