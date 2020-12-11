@@ -14,6 +14,12 @@ session_start();
     <?php
 	require_once("login_db.php");
 	
+	
+	
+	
+	
+	
+	
 	$sql = "UPDATE Counter SET visits = visits+1";
 	$conn->query($sql);
 	
@@ -31,7 +37,7 @@ session_start();
 	
 	$name = $_POST[‘name’];
 	if(isset($name)) {
-		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
+		$query = 'INSERT INTO 'sampledb'. 'User' ('name') VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
 			echo "Hello " . $name;
@@ -45,7 +51,8 @@ session_start();
 	<form method='POST'>
 		<h2>What is your name?</h2>
 		<input type="text" id="name" name="name">
-		<input type="submit" value="Submit Name">
+		<button type="submit" name="greet">Submit</button>
+
 	</form>
 	
 	
