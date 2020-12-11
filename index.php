@@ -36,7 +36,8 @@ session_start();
 	
     
     ?>
-	m action=”index.php” method=”post”>
+	
+	form action=”index.php” method=”post”>
 		<p>What is your name? <input type=”text” id="name" name=”name” /></p>
 		<p><input type=”submit” /></p>
 	</form>
