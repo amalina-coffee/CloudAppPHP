@@ -41,7 +41,7 @@ session_start();
 		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
-			echo "User created successfully...Hello, " . $name;
+			echo "<br>Hello, " . $name . "You are visitor #: " . $visits; 
 		} else {
 			echo "Error: <br>" . $conn->error;
 		}
@@ -49,12 +49,7 @@ session_start();
 
     
     ?>
-	
-	
-	
-	
-	
-	<p>You are visitor #: <?php print $visits; ?></p>
+
 </body>
 </html>
 
