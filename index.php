@@ -11,7 +11,14 @@ session_start();
 </head>
 <body>
     <h1>Hello World</h1>
-    <?php
+
+	<form method='POST'>
+		<h3>What is your name?</h3>
+		<input type="text" id="name" name="name">
+		<input type="submit" value="submit"/>
+	</form>
+	
+	<?php
 	require_once("login_db.php");
 	
 	$sql = "UPDATE Counter SET visits = visits+1";
@@ -34,7 +41,7 @@ session_start();
 		$query = 'INSERT INTO `sampledb`.`User` (`name`) VALUES ("'.$name.'");';
 
 		if ($conn->query($query) === TRUE) {
-			echo "User created successfully";
+			echo "User created successfully...Hello, " <?php print $name; ?>;
 		} else {
 			echo "Error: <br>" . $conn->error;
 		}
@@ -42,13 +49,6 @@ session_start();
 
     
     ?>
-	<form method='POST'>
-		<h3>What is your name?</h3>
-		<input type="text" id="name" name="name">
-		<button type="submit" name="greet">Submit</button>
-
-	</form>
-	
 	
 	
 	
